@@ -14,6 +14,13 @@ const randomFunc = {
 	symbol: getRandomSymbol,
 }
 
+lengthEl.addEventListener('keydown', function (e) {
+	e.preventDefault();
+}, false);
+lengthEl.addEventListener('paste', function (e) {
+	e.preventDefault();
+}, false);
+
 generateEl.addEventListener('click', () => {
 	const length = +lengthEl.value;
 	const hasLower = lowercaseEl.checked;
